@@ -16,6 +16,6 @@
 	
 	<annotation-driven />
 	
-	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/resources/**" location="/resources/" /> <!-- 정적파일 관련 --> 
 
 </beans:beans>
