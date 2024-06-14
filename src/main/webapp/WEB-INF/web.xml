@@ -25,5 +25,22 @@
         <servlet-name>app</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    
+<filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <!-- 스프링에서 제공하는 인코딩필터 클래스 등록 -->
+    <init-param>
+    	<!-- 인코딩 필터를 뭘로 할 것인지 키-밸류값으로 입력 -->
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </init-param>
+</filter>
+
+<filter-mapping>
+	<!-- 어떤 url을 요청 시 이 필터를 거쳐가도록 할 것이냐 -->
+    <filter-name>encodingFilter</filter-name> 
+    <url-pattern>/*</url-pattern> <!-- 모든 url요.-->
+</filter-mapping>
   
 </web-app>
